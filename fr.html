@@ -38,7 +38,7 @@
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
-        <a href="index.html" class="scrollto" style="font-weight: bold; font-size: 27px; font-family:  'Raleway', sans-serif;">TANET <span style="color: white;">VOYAGES</span></a>
+        <a href="fr.html" class="scrollto" style="font-weight: bold; font-size: 27px; font-family:  'Raleway', sans-serif;">TANET <span style="color: white;">VOYAGES</span></a>
         <!--- <img src="assets/img/logo.png" alt="" title=""> -->
       </div>
 
@@ -46,7 +46,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Accueil</a></li>
           <li><a href="#about">A propos</a></li>
-          <li><a href="#buy-tickets">Services</a></li>
+          <li><a href="#buy-tickets">Offres</a></li>
           <li><a href="#venue">Portfolio</a></li>
 
           <li><a href="#contact">Contactez-Nous</span></a></li>
@@ -59,8 +59,8 @@
   <!-- ======= Intro Section ======= -->
   <section id="intro">
     <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">Tanet Voyages<br><span>Agence de Voyages Algerienne</span></h1>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+      <h1 class="mb-4 pb-0"><span>Tanet Voyages</span><br>Agence de voyage algérienne, créant des sensations partout dans le monde.</h1>
+      <a href="https://www.youtube.com/watch?v=CjVV-TUbUNQ" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
     </div>
   </section><!-- End Intro Section -->
 
@@ -84,7 +84,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Nos Services</h2>
+          <h2>Nos Offres</h2>
           <p></p>
         </div>
 
@@ -93,7 +93,7 @@
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Camping dans le Désert</h5>
-
+                <h6 class="card-price text-center">$150</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Guide Touristique</li>
@@ -103,7 +103,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" >Détails</button>
+                  <button type="button" class="btn" onclick="modalClick('Camping dans le Désert');" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Détails</button>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Excursions dans le Désert</h5>
-
+                <h6 class="card-price text-center">$150</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Guide Touristique</li>
@@ -122,7 +122,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" >Détails</button>
+                  <button type="button" class="btn" onclick="modalClick('Excursions dans le Désert');" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Détails</button>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Planification de Voyage</h5>
-
+                <h6 class="card-price text-center">$150</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Réservation Hotel</li>
@@ -141,7 +141,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" >Détails</button>
+                  <button type="button" class="btn" onclick="modalClick('Planification de Voyage');" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Détails</button>
                 </div>
               </div>
             </div>
@@ -151,6 +151,21 @@
 
       </div>
 
+      <!-- Modal Order Form -->
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document" style="max-width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header" style="display: block;">
+              <h4 class="modal-title" id="modal-title" style="text-align: center;"></span>
+              </button></h4>
+              
+            </div>
+            <div class="modal-body" id="modal-body">
+             
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
     </section><!-- End Buy Ticket Section -->
     
@@ -248,7 +263,7 @@
 
         <div class="section-header">
           <h2>Contactez Nous</h2>
-          <p>Nihil officia ut sint molestiae tenetur.</p>
+
         </div>
 
         <div class="row contact-info">
@@ -256,16 +271,16 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Adresse</h3>
+              <address>Avenue Laarbi Ben Mhidi, Ouargla, Algerie</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+213 660 60 48 79</a></p>
+              <h3>Telephone</h3>
+              <p><a href="tel:+213660604879">+213 660 60 48 79</a></p>
             </div>
           </div>
 
@@ -273,7 +288,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">tanet.voyage@gmail.com</a></p>
+              <p><a href="mailto:tanet.voyage@gmail.com">tanet.voyage@gmail.com</a></p>
             </div>
           </div>
 
@@ -281,12 +296,12 @@
       </div>
     </section><!-- End Contact Section -->
 
-    <section id="venue">
+    <section id="carte">
 
       <div class="container" data-aos="fade-up">
         <div class="row no-gutters">
-          <div class="col-lg-12 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="col-lg-12 carte-map" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d846.3907154721646!2d5.3197053292384044!3d31.945623536822282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x125d6b430740a925%3A0xef83a121552e69fb!2sTanet%20Voyages!5e0!3m2!1sfr!2sdz!4v1601563505827!5m2!1sfr!2sdz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
 
         </div>
@@ -304,7 +319,8 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-6 footer-info">
-            <img src="assets/img/logo.png" alt="TheEvenet">
+            <a href="#footer" class="scrollto" style="font-weight: bold; font-size: 27px; font-family:  'Raleway', sans-serif;">TANET <span style="color: white;">VOYAGES</span></a>
+            <br><br>
             <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
@@ -313,16 +329,16 @@
           <div class="col-lg-6 col-md-6 footer-contact">
             <h4>Contactez Nous</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
+              Avenue Laarbi Ben Mhidi<br>
+              Ouargla<br>
+              Algerie <br>
               <strong>Phone:</strong> +213 660 60 48 79<br>
               <strong>Email:</strong> tanet.voyage@gmail.com<br>
             </p>
 
             <div class="social-links">
-              <a href="https://www.facebook.com/tanetvoyages/" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/tanetvoyages_/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.facebook.com/tanetvoyages/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/tanetvoyages_/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
             </div>
 
           </div>
@@ -362,6 +378,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script type="text/javascript">
+    function modalClick(title){
+      title = title+'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;'
+      body = "<p style='text-align: justify;'>&emsp;&emsp;&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio purus, imperdiet feugiat tempor sed, euismod sed sapien. Sed lacus nunc, porta ac lorem a, malesuada pretium tortor. Donec volutpat massa in mauris porttitor pretium. Vestibulum finibus congue semper. Mauris consequat ultrices arcu, non luctus arcu. Sed convallis vulputate elit non molestie. Cras fringilla sodales leo, quis ultrices magna dignissim consequat. Curabitur aliquet augue tincidunt magna condimentum ornare.</p>"
+
+      document.getElementById('modal-title').innerHTML = title;
+      document.getElementById('modal-body').innerHTML = body;
+    }
+  </script>
 
 </body>
 
