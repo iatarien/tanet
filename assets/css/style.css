@@ -480,6 +480,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   overflow: hidden;
   position: relative;
+ 
 }
 
 @media (min-width: 1024px) {
